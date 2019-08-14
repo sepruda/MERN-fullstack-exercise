@@ -34,7 +34,7 @@ export const ExercisesList = () => {
   useEffect(() => {
     const fetchData = async () => {
       const result = await axios
-        .get("https://exertrac.herokuapp.com/exercises/")
+        .get("/exercises/")
         .catch(err => console.log(err));
 
       setExercises(result.data);
@@ -45,7 +45,7 @@ export const ExercisesList = () => {
 
   const deleteExercise = id => {
     axios
-      .delete(`https://exertrac.herokuapp.com/exercises/${id}`)
+      .delete(`/exercises/${id}`)
       .then(res => console.log(res.data))
       .catch(err => console.log(err));
 
