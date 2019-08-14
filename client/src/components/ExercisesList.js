@@ -45,7 +45,7 @@ export const ExercisesList = () => {
 
   const deleteExercise = id => {
     axios
-      .delete(`https://localhost:5000/exercises/${id}`)
+      .delete(`https://exertrac.herokuapp.com/exercises/${id}`)
       .then(res => console.log(res.data))
       .catch(err => console.log(err));
 
